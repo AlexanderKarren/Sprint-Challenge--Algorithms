@@ -104,6 +104,7 @@ class SortingRobot:
             self.move_right()
             # held item is greater than neighbor
             if self.compare_item() == 1:
+                # turn on light to signify a swap was made
                 self.set_light_on()
                 # swap with held item
                 self.swap_item()
@@ -120,6 +121,7 @@ class SortingRobot:
                 self.move_right()
             if self.can_move_right() is False:
                 # print(self._list)
+                # if light is on, a swap was made and we need to do it again
                 if self.light_is_on():
                     # go back and start over
                     self.set_light_off()

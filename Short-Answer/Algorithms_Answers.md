@@ -19,14 +19,25 @@ Its formatting is strange, but this is essentially a flavorized n * 2.
 
 If I understand this problem correctly,
 
+True = floor where egg will break
+False = floor where egg will not break
+
 - Define a function that takes in one argument that's an array of boolean values of size n.
   - Initialize variable f to -1.
-  - Loop through each element in the boolean array:
-    - On each iteration, check to see if the value is False.
-      - Is it false? Set f to the index.
-      - is it true? Do nothing. Go to the next iteration of the loop.
+  - Initialize variable low as 0.
+  - Intialize variable high as n / 2.
+
+  - Intialize a while loop. While high is greater than or equal to low,
+    - Initialize a variable mid as high + low / 2.
+    - Access array at midpoint
+    - If array at midpoint is True,
+      - If index - 1 is False,
+        - Return index
+      - Else if index - 1 is True,
+        - high = index - 1
+      - If array at midpoint is False,
+        - low = index + 1
 
   - return the value of f.
 
-This function will loop through an array of size n and then complete.
-Its time complexity is O(n).
+The time complexity of this is O(log n)
