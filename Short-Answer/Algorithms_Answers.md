@@ -20,10 +20,13 @@ Its formatting is strange, but this is essentially a flavorized n * 2.
 If I understand this problem correctly,
 
 - Define a function that takes in one argument that's an array of boolean values of size n.
-  - Initialize variable f to 0.
+  - Initialize variable f to -1.
   - Loop through each element in the boolean array:
     - On each iteration, check to see if the value is False.
-      - Is it false? Set f to the index and break out of the loop.
+      - Is it false? Set f to the index.
       - is it true? Do nothing. Go to the next iteration of the loop.
 
   - return the value of f.
+
+This function will loop through an array of size n and then complete.
+Its time complexity is O(n).
